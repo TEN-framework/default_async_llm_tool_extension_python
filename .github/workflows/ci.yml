@@ -31,9 +31,16 @@ jobs:
           fetch-depth: "0"
           submodules: "true"
 
-      - name: Check ten dependencies
+      - name: Check dependencies
         run: |
-          tman install
+          task install
+
+      - name: Run tests
+        run: |
+          task test -- -s -v
+      - name: Run lint
+        run: |
+          task lint -- --errors-only
 
       - name: Release
         if: startsWith(github.ref, 'refs/tags/')
