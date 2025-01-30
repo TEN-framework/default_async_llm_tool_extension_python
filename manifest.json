@@ -1,12 +1,12 @@
 {
   "type": "extension",
   "name": "default_async_llm_tool_extension_python",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "dependencies": [
     {
       "type": "system",
       "name": "ten_ai_base",
-      "version": "0.1"
+      "version": "0.2"
     }
   ],
   "package": {
@@ -16,7 +16,10 @@
       "requirements.txt",
       "**.tent",
       "**.py",
-      "README.md"
+      "README.md",
+      "tests/**.py",
+      "tests/**.tent",
+      "tests/bin/start"
     ]
   },
   "api": {
